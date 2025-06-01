@@ -2,38 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quiz App</title>
+  <title>Simple Quiz App</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="quiz-container">
     <h1>Quiz App</h1>
-    <div class="question-box">
-      <p id="question">What is the capital of France?</p>
-      <ul class="options">
-        <li><button onclick="checkAnswer(this)">A. Berlin</button></li>
-        <li><button onclick="checkAnswer(this)">B. Madrid</button></li>
-        <li><button onclick="checkAnswer(this)">C. Paris</button></li>
-        <li><button onclick="checkAnswer(this)">D. Rome</button></li>
-      </ul>
-      <p id="feedback"></p>
-    </div>
+    <div id="question">What is the capital of India?</div>
+    
+    <ul id="options">
+      <li><button>Delhi</button></li>
+      <li><button>Mumbai</button></li>
+      <li><button>Kolkata</button></li>
+      <li><button>Chennai</button></li>
+    </ul>
+
+    <button id="next-btn">Next Question</button>
   </div>
-
-  <script>
-    function checkAnswer(button) {
-      const correct = "C. Paris";
-      const feedback = document.getElementById("feedback");
-
-      if (button.innerText === correct) {
-        feedback.textContent = "✅ Correct!";
-        feedback.style.color = "green";
-      } else {
-        feedback.textContent = "❌ Wrong answer. Try again!";
-        feedback.style.color = "red";
-      }
-    }
-  </script>
 </body>
 </html>
